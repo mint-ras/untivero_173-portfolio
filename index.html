@@ -18,10 +18,20 @@
       background-color: #47363c;
     }
     .landingpage h1 {
-      font-family: 'DDinItalic';
+      background-color: #1e283c;
+      border-radius: 2px;
+      font-family: 'DDinBold';
+      padding: 8px 12px;
+        text-align: left;
+        font-size: 100px;
+        color: white;
     }
     .landingpage p {
-      font-family: 'DDin';
+      font-family: 'DDinItalic';
+      padding: 8px 12px;
+      text-align: right;
+      font-size: 22px;
+      color: white;
     }
     /* Add a black background color to the top navigation */
     .topbar {
@@ -51,6 +61,7 @@
       display: flex;
       flex-wrap: wrap;
       padding: 0 0 4px 0;
+      justify-content: center;
     }
     .column {
       flex: 33%;
@@ -79,7 +90,7 @@
   		  width: 100%;
   	  }
     }
-    .members-text {
+    .about-text {
       font-size: 0.9rem;
       color: #d1d1d1;
     }
@@ -189,6 +200,11 @@
     font-family: "DDin";
     src: url('resource/fonts/D-DIN.otf');
   }
+  #logo {
+    border: 1px;
+    padding: 5px;
+    width: 100px;
+  }
     </style>
   </head>
   <body>
@@ -227,8 +243,8 @@
       <div class="landingpage">
         <br/><h1>Gallery of Time</h1>
         <p>This collection of shots is a memento mori of a world when time has stopped.<br/>
-            A study of a minute part of reality.<br/>
-            Photographed by Ron Russell G. Untivero.</p>
+            A study of a minute part of reality. <br/>
+            <small>Photographed by Ron Russell G. Untivero.</small></p>
       </div>
     </section>
     <section class="section" id="cafes">
@@ -258,7 +274,7 @@
     <section class="section" id="statue">
       <div class="container">
         <div class="topbar">
-          <h1>STATUE</h1>
+          <h1>STATUES</h1>
         </div>
         <div class="row">
             <div class="column">
@@ -300,21 +316,22 @@
       </div>
     </section>
     <footer id="about" class="footer" style="background-color: #000000">
-      <div class="has-text-centered">
-        <p class="members-text" data-aos="fade-right" data-aos-offset="-100">
 
-        </p>
-      </div>
+      <p class="mt">
+      <img src="resource/logo/ras_logo.png" id="logo" align="left">
+            Russell is a student of Photography under the program of BA Multimedia Studies in University of the Philippines Open University.<br/>
+            He is also a 3D artist and an aspiring game designer. <br/><br/>
+
+            <a id="footer-url" rel="artstation" href="https://mintedpwn.artstation.com/">Artstation</a></br>
+            <a id="footer-url" rel="artstation" href="https://www.instagram.com/rurounixrussell/?hl=en">Instagram</a></br>
+            Business: rguntivero@gmail.com <br/>
+      </p>
+
       <br />
       <div class="has-text-centered">
-        <p class="st footer-text" data-aos="fade-left" data-aos-offset="-100">
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-            <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
-          </a>
-          <br />This work is licensed under a
-          <a id="footer-url" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-            Creative Commons Attribution-NonCommercial 4.0 International License
-          </a>.
+        <p class="mt">
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />
+          This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
         </p>
       </div>
     </footer>
