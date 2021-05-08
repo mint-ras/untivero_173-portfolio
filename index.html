@@ -17,6 +17,12 @@
     html, body {
       background-color: #47363c;
     }
+    .landingpage h1 {
+      font-family: 'DDinItalic';
+    }
+    .landingpage p {
+      font-family: 'DDin';
+    }
     /* Add a black background color to the top navigation */
     .topbar {
       background-color: #be3f30;
@@ -30,6 +36,7 @@
       padding: 8px 12px;
       text-decoration: none;
       font-size: 18px;
+      font-family: 'DDinItalic';
     }
     .container {
       background-color: #242527;
@@ -150,23 +157,53 @@
 
   .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: solid 2px #be3f30;
+    border: solid 2px #be3f30;
+  }
+
+  a.navbar-item {
+    background-color: #ff9324;
+  }
+
+  .page-anchor {
+    letter-spacing: 0.05em !important;
+    color: #fff;
+  }
+
+  .page-anchor:hover {
+  	color: #8458B3 !important;
+  	transition: 0.5s ease-in;
+  }
+  .mt {
+    font-family: "DDinBold";
+  }
+
+  @font-face {
+    font-family: "DDinBold";
+    src: url('resource/fonts/D-DIN-Bold.otf');
+  }
+  @font-face {
+    font-family: "DDinItalic";
+    src: url('resource/fonts/D-DIN-Italic.otf');
+  }
+  @font-face {
+    font-family: "DDin";
+    src: url('resource/fonts/D-DIN.otf');
   }
     </style>
   </head>
   <body>
     <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-level="main-navigation">
       <div class="navbar-brand">
-        <a href="#home" class="navbar-item mt" id="nav-logo" style="background-color: #ff9324">
+        <a href="#home" class="page-anchor navbar-item mt" id="nav-logo">
           HOME
         </a>
       </div>
       <div class="navbar-menu st" style="background-color: #ff9324">
         <div class="navbar-end main">
-          <a href="#cafes" class="page-anchor navbar-item">CAFES</a>
-          <a href="#statue" class="page-anchor navbar-item">STATUES</a>
-          <a href="#timenlight" class="page-anchor navbar-item">LIGHT&TIME</a>
-          <a href="#about" class="page-anchor navbar-item">ABOUT</a>
+          <a href="#cafes" class="page-anchor navbar-item mt">cafes</a>
+          <a href="#statue" class="page-anchor navbar-item mt">statues</a>
+          <a href="#timenlight" class="page-anchor navbar-item mt">light & time</a>
+          <a href="#about" class="page-anchor navbar-item mt">about</a>
         </div>
       </div>
     </nav>
@@ -187,8 +224,11 @@
 
     <!-- Main Page -->
     <section class="section" id="home">
-      <div>
-        <h1>LANDING PAGE......</h1>
+      <div class="landingpage">
+        <br/><h1>Gallery of Time</h1>
+        <p>This collection of shots is a memento mori of a world when time has stopped.<br/>
+            A study of a minute part of reality.<br/>
+            Photographed by Ron Russell G. Untivero.</p>
       </div>
     </section>
     <section class="section" id="cafes">
