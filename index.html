@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Untivero</title>
+    <!-- Document Setup -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+    html, body {
+      background-color: #47363c;
+    }
+    /* Add a black background color to the top navigation */
+    .topbar {
+      background-color: #be3f30;
+      overflow: hidden;
+    }
+    /* Style the links inside the navigation bar */
+    .topbar h1 {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 8px 12px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .container {
+      background-color: #242527;
+      border-radius: 2px;
+    }
+    .container:after {
+      background: inherit;
+      box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+      filter: blur(10px);
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 0 4px 0;
+    }
+    .column {
+      flex: 33%;
+      max-width: 33%;
+      padding: 4px 4px;
+    }
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+    @media screen and (max-width: 800px) {
+      .column {
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .column {
+        flex: 100%;
+        max-width: 100%;
+      }
+	  }
+    @media screen and (max-width: 700px) {
+  	  .modal-content {
+  		  width: 100%;
+  	  }
+    }
+    .members-text {
+      font-size: 0.9rem;
+      color: #d1d1d1;
+    }
+    .footer-text {
+      font-size: 0.7rem;
+      color: #d1d1d1;
+    }
+	/* The Modal (background) */
+	.modal {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Stay in place */
+	  padding-top: 100px; /* Location of the box */
+	  left: 0;
+	  top: 0;
+	  width: 100%; /* Full width */
+	  height: 100%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color: rgb(0,0,0); /* Fallback color */
+	  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+
+	/* Modal Content (Image) */
+	.modal-content {
+	  margin: auto;
+	  display: block;
+	  width: 80%;
+	  max-width: 1000px;
+	  max-height: 1000px;
+    object-fit: contain;
+	}
+
+	/* Caption of Modal Image (Image Text) - Same Width as the Image */
+	#caption {
+	  margin: auto;
+	  display: block;
+	  width: 80%;
+	  max-width: 700px;
+	  text-align: center;
+	  color: #ccc;
+	  padding: 10px 0;
+	  height: 150px;
+	}
+
+	/* Add Animation - Zoom in the Modal */
+	.modal-content, #caption {
+	  animation-name: zoom;
+	  animation-duration: 0.6s;
+	}
+
+	@keyframes zoom {
+	  from {transform:scale(0)}
+	  to {transform:scale(1)}
+	}
+
+	/* The Close Button */
+	.close {
+	  position: absolute;
+	  top: 15px;
+	  right: 35px;
+	  color: #f1f1f1;
+	  font-size: 40px;
+	  font-weight: bold;
+	  transition: 0.3s;
+	}
+
+	.close:hover,
+	.close:focus {
+	  color: #bbb;
+	  text-decoration: none;
+	  cursor: pointer;
+	}
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: solid 2px #be3f30;
+  }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-level="main-navigation">
+      <div class="navbar-brand">
+        <a href="#home" class="navbar-item mt" id="nav-logo" style="background-color: #ff9324">
+          HOME
+        </a>
+      </div>
+      <div class="navbar-menu st" style="background-color: #ff9324">
+        <div class="navbar-end main">
+          <a href="#cafes" class="page-anchor navbar-item">CAFES</a>
+          <a href="#statue" class="page-anchor navbar-item">STATUES</a>
+          <a href="#timenlight" class="page-anchor navbar-item">LIGHT&TIME</a>
+          <a href="#about" class="page-anchor navbar-item">ABOUT</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+
+  		<!-- The Close Button -->
+  		<span class="close" onclick="closeModal();">&times;</span>
+
+  		<!-- Modal Content (The Image) -->
+  		<img id="img01" class="modal-content">
+
+  		<!-- Modal Caption (Text) -->
+  		<div id="caption"></div>
+
+  	</div>
+
+    <!-- Main Page -->
+    <section class="section" id="home">
+      <div>
+        <h1>LANDING PAGE......</h1>
+      </div>
+    </section>
+    <section class="section" id="cafes">
+      <div class="container">
+        <div class="topbar">
+          <h1>CAFES</h1>
+        </div>
+        <div class="row">
+            <div class="column">
+              <img src="resource/cafes/cafe_02.jpg" id="cafe01" onclick="openModal(this);" class="hover-shadow" alt="Weidmann's Coffee Shop<br/>Muntinlupa, 04-23-2021<br/>ISO-125, f/5, 1/400, Sony A6100">
+              <img src="resource/cafes/cafe_03.jpg" id="cafe02" onclick="openModal(this);" class="hover-shadow" alt="Kapetearya<br/>San Pedro Laguna, 04-23-2021<br/>ISO-100, f/6.3, 1/400, Sony A6100">
+              <img src="resource/cafes/cafe_06.jpg" id="cafe05" onclick="openModal(this);" class="hover-shadow" alt="TeaTo Tea.Coffee.Shake.<br/>San Pedro Laguna, 04-23-2021<br/>ISO-100, f/5.6, 1/800, Sony A6100">
+            </div>
+            <div class="column">
+              <img src="resource/cafes/cafe_04.jpg" id="cafe03" onclick="openModal(this);" class="hover-shadow" alt="Picked Cafe & Gallery<br/>Tunasan Muntinlupa, 04-23-2021<br/>ISO-100, f/7.1, 1/400, Sony A6100">
+              <img src="resource/cafes/cafe_05.jpg" id="cafe04" onclick="openModal(this);" class="hover-shadow" alt="Wagamama Cafe and Resto<br/>San Pedro Laguna, 04-23-2021<br/>ISO-100, f/7.1, 1/1000, Sony A6100">
+              <img src="resource/cafes/cafe_08.jpg" id="cafe06" onclick="openModal(this);" class="hover-shadow" alt="Bloc 49<br/>San Pedro Laguna, 04-23-2021<br/>ISO-100, f/7.1, 1/1000, Sony A6100">
+            </div>
+            <div class="column">
+              <img src="resource/cafes/cafe_09.jpg" id="cafe07" onclick="openModal(this);" class="hover-shadow" alt="Hangout Cafe<br/>San Pedro Laguna, 04-23-2021<br/>ISO-800, f/5, 1/125, Sony A6100">
+              <img src="resource/cafes/cafe_10.jpg" id="cafe08" onclick="openModal(this);" class="hover-shadow" alt="Black Scoop Cafe<br/> San Pedro Laguna, 04-23-2021<br/>ISO-200, f/4.5, 1/125, Sony A6100">
+              <img src="resource/cafes/cafe_11.jpg" id="cafe11" onclick="openModal(this);" class="hover-shadow" alt="Food Panda Delivery Service<br/>04-23-2021<br/>ISO-100, f/7.1, 1/1000, Sony A6100">
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="statue">
+      <div class="container">
+        <div class="topbar">
+          <h1>STATUE</h1>
+        </div>
+        <div class="row">
+            <div class="column">
+              <img src="resource/statue/statue_03.jpg" id="statue03" onclick="openModal(this);" class="hover-shadow"alt="UPOU Oblation<br/>Los Baños Laguna, 03-12-2021<br/>ISO-125, f/5.6, 1/400, Sony A6100">
+              <img src="resource/statue/statue_02.jpg" id="statue02" onclick="openModal(this);" class="hover-shadow"alt="The Rose of Marya: Service through Excellence<br/>UPLB Los Baños Laguna, 03-12-2021<br/>ISO-400, f/5, 1/1000, Sony A6100">
+            </div>
+            <div class="column">
+  			    <img src="resource/statue/statue_01.jpg" id="statue01" onclick="openModal(this);" class="hover-shadow" alt="The Pegaraw<br/>UPLB Los Baños Laguna, 03-12-2021<br/>ISO-125, f/5.6, 1/800, Sony A6100">
+            <img src="resource/statue/statue_05.jpg" id="statue05" onclick="openModal(this);" class="hover-shadow" alt="The Triumph of Science Over Death<br/>Alabang Muntinlupa, 03-12-2021<br/>ISO-125, f/5.6, 1/1250, Sony A6100">
+            </div>
+            <div class="column">
+              <img src="resource/statue/statue_04.jpg" id="statue04" onclick="openModal(this);" class="hover-shadow"alt="Oblation under gloomy skies<br/>UPOU Los Baños Laguna, 03-12-2021<br/>ISO-125, f/5.6, 1/400, Sony A6100">
+              <img src="resource/statue/statue_06.jpeg" id="statue06" onclick="openModal(this);" class="hover-shadow"alt="Mariang Banga<br/>UPLB Los Baños Laguna, 03-12-2021<br/>ISO-125, f/5.6, 1/400, Post Process: Double Exposure, Sony A6100">
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="timenlight">
+      <div class="container">
+        <div class="topbar">
+          <h1>LIGHT & TIME</h1>
+        </div>
+        <div class="row">
+            <div class="column">
+              <img src="resource/timenlight/timenlight_01.jpg" id="timenlight01" onclick="openModal(this);" class="hover-shadow" alt="Ilaw ng Tahanan<br/>Tunasan Muntinlupa, 03-20-2021<br/>ISO-3200, f/9, 1/320, Sony A6100">
+              <img src="resource/timenlight/timenlight_02.jpg" id="timenlight02" onclick="openModal(this);" class="hover-shadow" alt="Uncanny Tranquility<br/>Alabang Muntinlupa, 04-23-2021<br/>ISO-100, f/5, 1/400, Sony A6100">
+              <img src="resource/timenlight/timenlight_03.jpg" id="timenlight03" onclick="openModal(this);" class="hover-shadow"alt="Lighting & Lightning<br/>San Pedro Laguna, 04-23-2021<br/>ISO-100, f/20, 1/400, Sony A6100">
+            </div>
+            <div class="column">
+              <img src="resource/timenlight/timenlight_04.jpeg" id="timenlight04" onclick="openModal(this);" class="hover-shadow" alt="Pittura Metafisica<br/>Alabang Muntinlupa, 03-20-2021<br/>ISO-200, f/7.1, 1/1000, Sony A6100">
+              <img src="resource/timenlight/timenlight_05.jpg" id="timenlight05" onclick="openModal(this);" class="hover-shadow" alt="Nostalghia 1983<br/>Tunasan Muntinlupa, 03-20-2021<br/>ISO-100, f/5, 1/125, Sony A6100">
+              <img src="resource/timenlight/timenlight_06.jpg" id="timenlight06" onclick="openModal(this);" class="hover-shadow"alt="Ao Sora<br/>San Pedro Laguna, 03-20-2021<br/>ISO-400, f/5.6, 1/160, Sony A6100">
+            </div>
+            <div class="column">
+        			<img src="resource/timenlight/timenlight_07.jpeg" id="timenlight07" onclick="openModal(this);" class="hover-shadow"alt="Friday Hustle<br/>Alabang Muntinlupa, 03-20-2021<br/>ISO-400, f/5.6, 1/160, Sony A6100">
+        			<img src="resource/timenlight/timenlight_08.jpeg" id="timenlight08" onclick="openModal(this);" class="hover-shadow"alt="Burning Red 49<br/>Alabang Muntinlupa, 03-20-2021<br/>ISO-100, f/5.6, 1/800, Sony A6100">
+            </div>
+        </div>
+      </div>
+    </section>
+    <footer id="about" class="footer" style="background-color: #000000">
+      <div class="has-text-centered">
+        <p class="members-text" data-aos="fade-right" data-aos-offset="-100">
+
+        </p>
+      </div>
+      <br />
+      <div class="has-text-centered">
+        <p class="st footer-text" data-aos="fade-left" data-aos-offset="-100">
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+            <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+          </a>
+          <br />This work is licensed under a
+          <a id="footer-url" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+            Creative Commons Attribution-NonCommercial 4.0 International License
+          </a>.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+    // Open the Modal
+    function openModal(img) {
+  		// Get the modal
+  		var modal = document.getElementById("myModal");
+
+  		// Get the image and insert it inside the modal - use its "alt" text as a caption
+  		var img = document.getElementById(img.id);
+  		var modalImg = document.getElementById("img01");
+  		var captionText = document.getElementById("caption");
+  		img.onclick = function(){
+    		  modal.style.display = "block";
+    		  modalImg.src = this.src;
+    		  captionText.innerHTML = this.alt;
+  		  }
+    }
+
+    // Close the Modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    </script>
+  </body>
